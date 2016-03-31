@@ -362,4 +362,16 @@ class BlockCart extends Module
 			'PS_BLOCK_CART_XSELL_LIMIT' => (int)Tools::getValue('PS_BLOCK_CART_XSELL_LIMIT', Configuration::get('PS_BLOCK_CART_XSELL_LIMIT'))
 		);
 	}
+
+	public function hookDisplayInsideMenu($params){
+	    if (Configuration::get('PS_CATALOG_MODE'))
+	        return;
+	 
+	    $this->smarty->assign(array(
+	        'order_page' => (strpos($_SERVER['PHP_SELF'], 'order') !== false),
+	        'blockcart_top' => (isset($params['blockcart_top']) && $params['blockcart_top']) ? true : false,
+	    ));
+	    $this->assignContentVars($params);
+	    return $this->display(__FILE__, 'blockcart-menu.tpl');
+	}
 }
