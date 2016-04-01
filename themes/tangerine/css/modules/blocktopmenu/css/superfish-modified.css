@@ -3,7 +3,12 @@
   /*clear: both;*/
   float: right;
   width: 66%; }
-
+  @media (max-width: 480px) {
+    .sf-contener {
+      width: 100%; } } 
+  @media (max-width: 767px) {
+    .sf-contener {
+      width: 100%; } } 
 .sf-menu,
 .sf-menu * {
   margin: 0;

@@ -3,10 +3,9 @@
 	<div id="block_top_menu" class="sf-contener clearfix col-lg-12">
 		<div class="cat-title">{l s="Menu" mod="blocktopmenu"}</div>
 		<ul class="sf-menu clearfix menu-content">			
-			{$MENU}
-			{Hook::exec('displayInsideMenu')}
+			{$MENU}			
 			{if $MENU_SEARCH}
-				<li class="sf-search noBack" style="float:right">
+				<li class="sf-search noBack">
 					<a href="#" onclick="return false;"><span>{l s='Buscar' mod='blocktopmenu'}</span></a>
 					<ul>
 						<li>
@@ -25,7 +24,8 @@
 					</ul>
 					
 				</li>
-			{/if}			
+			{/if}	
+			{Hook::exec('displayInsideMenu')}
 		</ul>
 	</div>
 	<!--/ Menu -->

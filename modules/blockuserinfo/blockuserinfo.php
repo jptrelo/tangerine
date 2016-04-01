@@ -81,4 +81,9 @@ class BlockUserInfo extends Module
 	{
 		return $this->display(__FILE__, 'nav.tpl');
 	}
+
+	public function hookDisplayInsideMenu($params)
+	{
+	    return $this->display(__FILE__, 'nav-menu.tpl');
+	}
 }
