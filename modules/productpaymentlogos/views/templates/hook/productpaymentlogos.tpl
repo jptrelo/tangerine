@@ -23,7 +23,7 @@
 *  International Registered Trademark & Property of PrestaShop SA
 *}
 <!-- Productpaymentlogos module -->
-<div id="product_payment_logos">
+<div id="product_payment_logos" class="footer-block col-xs-12 col-sm-4">
 	<div class="box-security">
     <h5 class="product-heading-h5">{$banner_title|escape:'htmlall':'UTF-8'}</h5>
   	{if $banner_link != ''}<a href="{$banner_link|escape:'htmlall':'UTF-8'}" title="{$banner_title|escape:'htmlall':'UTF-8'}">{/if}

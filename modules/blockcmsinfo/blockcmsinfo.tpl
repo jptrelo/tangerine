@@ -24,9 +24,9 @@
 *}
 {if $infos|@count > 0}
 <!-- MODULE Block cmsinfo -->
-<div id="cmsinfo_block">
+<div id="cmsinfo_block" class="footer-block col-xs-12 col-sm-6">
 		{foreach from=$infos item=info}
-			<div class="col-xs-6">{$info.text}</div>
+			<div class="col-xs-12">{$info.text}</div>
 		{/foreach}
 </div>
 <!-- /MODULE Block cmsinfo -->

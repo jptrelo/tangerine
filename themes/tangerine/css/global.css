@@ -5729,8 +5729,10 @@ textarea {
   padding-top: 0px; }
 
 #index .tab-content {
-  margin-top: 35px;
-  margin-bottom: 34px; }
+  float: none;
+  margin: 35px auto;
+ /* margin-top: 35px;
+  margin-bottom: 34px; */}
 
 header {
   z-index: 1;
@@ -8373,16 +8375,16 @@ div.star.star_hover:after {
 #facebook_block,
 #cmsinfo_block {
   overflow: hidden;
-  background: #f2f2f2;
+/*  background: #f2f2f2;*/
   min-height: 344px;
-  height: 344px;
+  /*height: 344px;*/
   padding-right: 29px;
   padding-left: 29px; }
   @media (max-width: 991px) {
     #facebook_block,
     #cmsinfo_block {
       min-height: 354px;
-      height: 354px;
+      /*height: 354px;*/
       padding-left: 13px;
       padding-right: 13px; } }
   @media (max-width: 767px) {
@@ -8411,7 +8413,7 @@ div.star.star_hover:after {
   padding-bottom: 10px; }
 
 #cmsinfo_block {
-  border-left: 1px solid #d9d9d9; }
+  border-left: none; }
   @media (max-width: 767px) {
     #cmsinfo_block {
       border: none;

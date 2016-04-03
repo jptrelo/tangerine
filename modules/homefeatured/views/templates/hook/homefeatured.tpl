@@ -29,7 +29,7 @@
 	{if isset($products) AND $products}
 		<div class="block_content">
 			{assign var='liHeight' value=250}
-			{assign var='nbItemsPerLine' value=4}
+			{assign var='nbItemsPerLine' value=3}
 			{assign var='nbLi' value=$products|@count}
 			{math equation="nbLi/nbItemsPerLine" nbLi=$nbLi nbItemsPerLine=$nbItemsPerLine assign=nbLines}
 			{math equation="nbLines*liHeight" nbLines=$nbLines|ceil liHeight=$liHeight assign=ulHeight}

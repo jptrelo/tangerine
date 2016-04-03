@@ -351,6 +351,18 @@ class Blockcmsinfo extends Module
 		return $this->display(__FILE__, 'blockcmsinfo.tpl', $this->getCacheId());
 	}
 
+	public function hookDisplayFooter($params)
+	{
+		$this->context->controller->addCSS($this->_path.'style.css', 'all');
+		if (!$this->isCached('blockcmsinfo.tpl', $this->getCacheId()))
+		{
+			$infos = $this->getInfos($this->context->language->id, $this->context->shop->id);
+			$this->context->smarty->assign(array('infos' => $infos, 'nbblocks' => count($infos)));
+		}
+
+		return $this->display(__FILE__, 'blockcmsinfo.tpl', $this->getCacheId());
+	}
+
 	public function getInfos($id_lang, $id_shop)
 	{
 		$sql = 'SELECT r.`id_info`, r.`id_shop`, rl.`text`
