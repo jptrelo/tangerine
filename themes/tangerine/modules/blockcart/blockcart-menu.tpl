@@ -173,6 +173,10 @@
 {if isset($blockcart_top) && $blockcart_top}
 </div>
 {/if}
+
+<!-- /MODULE Block cart -->
+</li>
+
 {counter name=active_overlay assign=active_overlay}
 {if !$PS_CATALOG_MODE && $active_overlay == 1}
     <div id="layer_cart">
@@ -319,5 +323,3 @@
 {addJsDefL name=delete_txt}{l s='Delete' mod='blockcart' js=1}{/addJsDefL}
 {addJsDefL name=toBeDetermined}{l s='To be determined' mod='blockcart' js=1}{/addJsDefL}
 {/strip}
-<!-- /MODULE Block cart -->
-</li>
