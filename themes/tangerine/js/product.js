@@ -134,7 +134,7 @@ $(document).ready(function()
 			items:'li:visible',
 			prev:'#view_scroll_left',
 			next:'#view_scroll_right',
-			axis:'x',
+			axis:'y',
 			offset:0,
 			start:0,
 			stop:true,

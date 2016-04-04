@@ -332,11 +332,12 @@ span.view_scroll_spacer {
   .pb-center-column #buy_block {
     margin-top: 10px; }
     .pb-center-column #buy_block label {
-      display: inline-block;
-      width: 125px;
+      /*display: inline-block;*/
+      padding-top: 5px;
+      width: 55px;
       font-weight: 700;
       font-size: 12px;
-      text-align: right; }
+      text-align: left; }
     .pb-center-column #buy_block p.price {
       padding: 0; }
   .pb-center-column #color_picker p {
@@ -835,8 +836,8 @@ table.table-product-discounts {
   text-align: left; }
 
 .buttons_bottom_block {
-  clear: both;
-  padding: 13px 19px 0; }
+  /*clear: both;*/
+  padding: 0px 19px 0; }
   .buttons_bottom_block #wishlist_button {
     font-weight: 700; }
 
@@ -1051,5 +1052,52 @@ Quick View Styles
   border: 1px solid #d6d4d4; }
 .ie8 .box-security {
   filter: none; }
+
+/************************************** MINIATURAS VERTICALES ****************************************/
+#image-block {
+width:75% !important;
+float:right;
+}
+ 
+#views_block {
+  float: left !important;
+  width: 20% !important;
+  margin-top: 0px !important;
+}
+ 
+ 
+ 
+#thumbs_list {
+max-width:100% !important; 
+height:285px !important;
+margin-top:10px;
+}
+ 
+#thumbs_list ul#thumbs_list_frame {
+max-width:100% !important; 
+height:285px !important;
+overflow:visible !important;
+}
+ 
+.view_scroll_spacer, .carousel-controls {
+top: 0px !important;
+}
+ 
+span.view_scroll_spacer .carousel-control.left {
+  left: 55px !important;
+   top: -25px !important;
+   -ms-transform: rotate(90deg);
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);
+}
+ 
+span.view_scroll_spacer .carousel-control.right {
+  left: 55px !important;
+  top: 295px !important;
+  -ms-transform: rotate(90deg);
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);
+}
+/**************************** FIN MINIATURAS VETICALES ***********************************/
 
 /*# sourceMappingURL=product.css.map */
