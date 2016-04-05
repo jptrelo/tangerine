@@ -6,6 +6,7 @@
 .DS_Store
 .sass-cache
 config.codekit
+config/settings.inc.php
 *.sublime-project
 *.sublime-workspace
 /.htaccess
