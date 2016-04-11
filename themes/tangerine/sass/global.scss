@@ -1,12 +1,67 @@
 @charset "UTF-8";
 // Make sure the charset is set appropriately
 
+@import "compass/css3";
+@import "compass/css3/box-sizing";
+@import "compass/css3/box-shadow";
 @import "compass";
+@import "compass/css3/border-radius";
+@import "compass/utilities";
 @import "compass/reset";
 @import "theme_variables";
 @import "bootstrap";
 @import "font-awesome/font-awesome";
 @import "icons";
+@import "../fontsR/stylesheet.css";
+@import "../fontsM/stylesheet.css";
+
+/*=======BorderRadius=======*/
+
+@mixin border-radius($radius) { 
+	 -webkit-border-radius: $radius;
+		-moz-border-radius: $radius; 
+			 border-radius: $radius;
+}
+
+@mixin transform($transforms) {
+	   -moz-transform: $transforms;
+	     -o-transform: $transforms;
+	    -ms-transform: $transforms;
+	-webkit-transform: $transforms;
+    	    transform: $transforms;
+}
+
+/*=======Artefactos=======*/
+
+%bg-basic {
+	background: {
+		repeat: no-repeat;
+		position: center center;
+		color: transparent;
+		size: 100%;
+	}
+}
+%after-before-bas {
+	position: absolute;
+	content: " ";
+}
+%ab-100 {
+	@extend %after-before-bas;
+	width: 100%;
+}
+
+/*=======Color=======*/
+
+$t_blue_dark:		#202d43;
+$t_blue_soft:		#84a9b2;
+$t_orange:			#ff8300;
+$t_red:				#ed462f;
+$t_gray:			#666666;
+$t_gray_dark:		#333333;
+$t_gray_soft:		#DDDDDD;
+
+//tangerine - end
+
 
 a:hover {
 	text-decoration: none;
@@ -3549,4 +3604,136 @@ div.star.star_hover {
 
 .pointer-box {
   cursor: pointer;
+}
+
+
+
+
+//tangerine
+
+.header-container {
+	#block_top_menu {
+		padding-top: 15px;
+	}
+	#header_logo {
+		img { 
+			max-width: 300px;
+			margin-bottom: 0.5em;
+		}
+	}
+	#header {
+		padding-bottom: 0;
+		#header_logo {
+			a { 
+				padding-left: 1em;
+				display: block;
+			}
+		}
+		.banner { display: none;}
+		.row-top-menu {
+			background: $t_blue_dark;
+			.sf-menu {
+				text-align: right;
+				background: none;
+				border: none;
+				margin: 0;
+				padding-right: 4em;
+				padding-top: 0.5em;
+				li {
+					float: none;
+					display: inline-block;
+					background: none;
+					border: none;
+					vertical-align: middle;
+					a {
+						font-family: 'robotoregular';
+						color: white;
+						border: none;
+						padding: 1em 2em;
+						letter-spacing: 1px;
+						font-size: 1em;
+					}
+				}
+				.sf-search,
+				.shopping_cart,
+				.header_user_info_menu {
+					float: none;
+					a { 
+						@extend %bg-basic;
+						text-indent: -5000px;
+						overflow: hidden;
+						display: block;
+						width: 4rem;
+						height: 4rem;
+						//background-color: red;
+						padding: 0;
+						border: none !important;
+						font-size: 0;
+						background-size: 2.5rem;
+						&:after,
+						&:before { display: none;}
+					}
+				}
+				.header_user_info_menu {
+					a { background-image: url(../svg/ico_log.svg);}
+				}
+				.sf-search {
+					padding-left: 0.5em;
+					margin-right: 0.5em;
+					border-left: 1px solid $t_blue_soft;
+					a { background-image: url(../svg/ico_find.svg);}
+				}
+				.shopping_cart {
+					width: auto;
+					margin-left: 0.5em;
+					a { background-image: url(../svg/ico_shop.svg);}
+				}
+			}
+		}
+	}
+}
+
+.columns-container {
+	#homepage-slider {
+		.homeslider-description {
+			h2 {
+				//font-family: 'moonlight';
+				font-weight: 200;
+				letter-spacing: 1px;
+				color: $t_blue_dark;
+				text-transform: uppercase;
+				&:first-child {
+					font-size: 2em;
+					margin-bottom: 0.2em;
+				}
+				span { color: $t_blue_dark !important;}
+			}
+			p {
+				width: 100%;
+				padding: 0;
+				margin: 0.5em 0 0;
+			}
+			.btn {
+				font-size: 1em;
+				color: $t_blue_dark;
+				padding: 0.5em 5em 0.5em 3em;
+				text-transform: initial;
+				background: {
+					image: url(../svg/ico_shop_dark.svg);
+					size: 1.5em;
+					position: 1em center;
+					color: $t_orange;
+					repeat: no-repeat;
+				}
+			}
+		}
+	}
+	#columns { 
+		padding-top: 0;
+		max-width: 1350px;
+		margin: auto;
+	}
+}
+#slider_row {
+	.bx-wrapper { margin: auto !important;}
 }
