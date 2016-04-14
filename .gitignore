@@ -9,7 +9,6 @@ config.codekit
 config/settings.inc.php
 *.sublime-project
 *.sublime-workspace
-/.htaccess
 # Directories content
 cache/class_index.php
 cache/smarty/cache/*
@@ -24,7 +23,6 @@ config/settings.inc.php
 
 log/*.log
 
-img/*
 !img/index.php
 !img/*/index.php
 
