@@ -1,5 +1,6 @@
 /* lnk on detail product page */
 #wishlist_button, #wishlist_button_nopop {
+  content: "\f08a";
   font-weight: 700;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -179,4 +180,7 @@ ul.product_list.grid > li .product-container .functional-buttons .wishlist .popo
       background-color: #cccccc;
       cursor: pointer; }
 
+.custom-wishlist{
+  background-image: url(../../../svg/ico_view_light.svg);
+}
 /*# sourceMappingURL=blockwishlist.css.map */

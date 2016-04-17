@@ -28,7 +28,7 @@
        	{$HOOK_HOME_TAB}
        </ul>
 	{/if}
-	<div class="tab-content col-xs-12 col-sm-11 col-md-11">{$HOOK_HOME_TAB_CONTENT}</div>
+	<div class="tab-content col-xs-12 col-sm-12 col-md-12">{$HOOK_HOME_TAB_CONTENT}</div>
 {/if}
 {if isset($HOOK_HOME) && $HOOK_HOME|trim}
 	<div class="clearfix">{$HOOK_HOME}</div>

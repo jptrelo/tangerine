@@ -405,6 +405,11 @@
 		</div>--> <!-- end pb-right-column-->
 	</div> <!-- end primary_block -->
 	{if !$content_only}
+	<ul class="nav nav-tabs" id="myTab">
+	  <li class="active"><a data-target="#fichaTecnica" data-toggle="tab">FICHA TECNICA</a></li>
+	  <li><a data-target="#masInfo" data-toggle="tab">MAS</a></li>
+	  <li><a data-target="#productosRelacionados" data-toggle="tab">RESEÑAS</a></li>
+	</ul>
 {if (isset($quantity_discounts) && count($quantity_discounts) > 0)}
 			<!-- quantity discount -->
 			<section class="page-product-box">
@@ -469,11 +474,12 @@
 					</table>
 				</div>
 			</section>
-		{/if}
+		{/if}		
+		<div class="tab-content">
 		{if isset($features) && $features}
 			<!-- Data sheet -->
-			<section class="page-product-box">
-				<h3 class="page-product-heading">{l s='Data sheet'}</h3>
+			<section id="fichaTecnica" class="page-product-box tab-pane active">
+				<!--h3 class="page-product-heading">{l s='Data sheet'}</h3-->
 				<table class="table-data-sheet">
 					{foreach from=$features item=feature}
 					<tr class="{cycle values="odd,even"}">
@@ -489,8 +495,8 @@
 		{/if}
 		{if isset($product) && $product->description}
 			<!-- More info -->
-			<section class="page-product-box">
-				<h3 class="page-product-heading">{l s='More info'}</h3>
+			<section id="masInfo" class="page-product-box tab-pane">
+				<!--h3 class="page-product-heading">{l s='More info'}</h3-->
 				<!-- full description -->
 				<div  class="rte">{$product->description}</div>
 			</section>
@@ -503,10 +509,11 @@
 		</section>
 		{/if}
 		<!--HOOK_PRODUCT_TAB -->
-		<section class="page-product-box">
+		<section id="productosRelacionados" class="page-product-box tab-pane">
 			{$HOOK_PRODUCT_TAB}
 			{if isset($HOOK_PRODUCT_TAB_CONTENT) && $HOOK_PRODUCT_TAB_CONTENT}{$HOOK_PRODUCT_TAB_CONTENT}{/if}
 		</section>
+		</div>
 		<!--end HOOK_PRODUCT_TAB -->
 		{if isset($accessories) && $accessories}
 			<!--Accessories -->
